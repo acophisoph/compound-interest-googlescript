@@ -1,0 +1,20 @@
+/**
+ * Compound Interest Function
+ * 
+ * @param 1st argument is how many years to compound
+ * @param 2nd argument is annual interest rate returns
+ * @param 3rd argument is initial value
+ * @param 4th argument is annual contribution
+ * 
+ * @return compounded interest
+ * @customfunction
+ */
+
+function COMPOUND(initialsum, contribution, interestpercent, years) {
+  var i = 1;
+  do {
+    initialsum = (initialsum + contribution)*(1+interestpercent);
+    i++;
+  }while (i <= years);
+  return initialsum;
+}
